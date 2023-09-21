@@ -1,27 +1,61 @@
 section.hero {
-  margin-block: 20px 210px;
+  margin-block: 0.5em 5em;
   background: url("../images/element.svg") no-repeat -4% 2%;
 }
 
 .container__text-field {
-  width: 450px;
+  width: 30vw;
 }
 
 .title.hero {
-  font-size: 48px;
+  font-size: 3em;
 }
 
 .text.hero {
-  font-size: 21px;
-  margin: 25px 0 45px;
+  font-size: 1.2em;
+  margin: 1.3em 0 2.7em;
 }
 
 .text.providers {
-  margin-block: 30px;
+  margin-block: 2em;
 }
 
 button.filled {
   background: #458ff6;
   color: #fff;
   border: none;
+}
+
+button.filled:hover {
+  background-color: white;
+  color: #458ff6;
+  border: 1.4px solid #458ff6;
+}
+
+.hero__image {
+  width: 50%;
+}
+
+.hero__image.first {
+  animation: firstImageSlide 1.5s ease-in-out;
+}
+
+.hero__image.second {
+  animation: secondImageSlide 1.5s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+  .hero__image {
+    display: none;
+  }
+
+  .container__text-field {
+    width: 70vw;
+    margin: 5vh auto 0;
+    text-align: center;
+  }
+
+  .line {
+    margin: 0 auto;
+  }
 }
