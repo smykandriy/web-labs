@@ -4,7 +4,7 @@ body {
   font-size: 18px;
 }
 
-@media screen and (max-width: 460px)  {
+@media screen and (max-width: 460px) {
   body {
     font-size: 12px;
   }
@@ -58,7 +58,7 @@ button:hover {
 
 .line {
   width: 3em;
-  height: .15em;
+  height: 0.15em;
   background-color: black;
   border-radius: 10px;
   border: none;
