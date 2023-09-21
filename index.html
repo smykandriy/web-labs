@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trafalgar</title>
 
-    <!-- font -->
     <link
       href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;700&display=swap"
       rel="stylesheet"
@@ -14,21 +13,24 @@
   </head>
 
   <body>
-      <header class="container inline-section">
-        <div class="pageTitle">
-          <p class="header__logo">T</p>
-          <p class="title header">Trafalgar</p>
-        </div>
-        <nav class="inline-nav">
-          <ul>
-            <li><a class="header__nav-item home" href="">Home</a></li>
-            <li><a class="header__nav-item" href="">Find a doctor</a></li>
-            <li><a class="header__nav-item" href="">Apps</a></li>
-            <li><a class="header__nav-item" href="">Testimonials</a></li>
-            <li><a class="header__nav-item" href="">About us</a></li>
-          </ul>
-        </nav>
-      </header>
+    <header class="container inline-section">
+      <div class="pageTitle">
+        <p class="header__logo">T</p>
+        <p class="title header">Trafalgar</p>
+      </div>
+      <div class="header__menu" onclick="toggleMenu()">
+        <img src="./images/hamburger.svg" alt="Menu icon">
+      </div>
+      <nav id="nav-links" class="inline-nav header">
+        <ul>
+          <li><a class="header__nav-item home" href="">Home</a></li>
+          <li><a class="header__nav-item" href="">Find a doctor</a></li>
+          <li><a class="header__nav-item" href="">Apps</a></li>
+          <li><a class="header__nav-item" href="">Testimonials</a></li>
+          <li><a class="header__nav-item" href="">About us</a></li>
+        </ul>
+      </nav>
+    </header>
 
     <section class="hero">
       <div class="container">
@@ -40,10 +42,18 @@
           </p>
           <button class="filled" type="button">Consult today</button>
         </div>
-        <img class="hero__image" src="images/hero-image1.png" alt="hero-image1" />
+        <img
+          class="hero__image first"
+          src="images/hero-image1.png"
+          alt="hero-image1"
+        />
       </div>
       <div class="container">
-        <img class="hero__image" src="images/hero-image2.png" alt="hero-image2" />
+        <img
+          class="hero__image second"
+          src="images/hero-image2.png"
+          alt="hero-image2"
+        />
         <div class="container__text-field">
           <h2 class="title">Leading healthcare providers</h2>
           <div class="line"></div>
@@ -128,7 +138,7 @@
           <p class="footer__logo">T</p>
           <p class="footer__title">Trafalgar</p>
         </div>
-        <nav class="inline-nav">
+        <nav>
           <ul>
             <li><a class="footer__nav-item" href="">Company</a></li>
             <li><a class="footer__nav-item" href="">Region</a></li>
@@ -137,5 +147,7 @@
         </nav>
       </footer>
     </section>
+
+    <script src="./js/main.js"></script>
   </body>
 </html>
