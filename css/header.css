@@ -1,21 +1,89 @@
 .title.header {
-    font-size: 24px;
-    color: #233348;
+  font-size: 1.3em;
+  color: #233348;
 }
 
 .header__logo {
-    background-color: #458FF6;
-    width: 41px;
-    height: 41px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 26px;
-    color: white;
+  background-color: #458ff6;
+  width: 5vh;
+  height: 5vh;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4em;
+  color: white;
+}
+
+.inline-nav.header ul li:not(:last-child) {
+  padding-right: 1em;
 }
 
 .header__nav-item.home {
-    font-weight: 700;
-    color: var(--1f1534-hyfen, #1F1534);
+  font-weight: 700;
+  color: var(--1f1534-hyfen, #1f1534);
+}
+
+.header__nav-item {
+  transition: font-size 1s;
+}
+
+.header__nav-item:hover {
+  font-size: 1.2em;
+}
+
+.header__menu {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: #fff;
+    z-index: 10;
+  }
+
+  .header__menu {
+    display: block;
+  }
+
+  .header__logo {
+    width: 5vw;
+    height: 5vw;
+  }
+
+  .inline-nav.header {
+    background: #deeefe;
+    position: fixed;
+    top: 72px;
+    right: 0;
+    bottom: 0;
+    margin-top: 0;
+    clip-path: circle(0 at top right);
+    transition: clip-path 0.6s ease-in;
+  }
+
+  .inline-nav.header.open {
+    clip-path: circle(100vh at top);
+  }
+
+  .inline-nav.header ul {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .inline-nav.header .header__nav-item {
+    margin-right: 0;
+    padding-top: 10vh;
+    flex: 1;
+  }
+
+  .inline-nav.header a {
+    font-weight: 500;
+    display: block;
+    font-size: 2.3em;
+  }
 }
